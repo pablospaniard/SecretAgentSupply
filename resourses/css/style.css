@@ -64,10 +64,10 @@ h2 {
 .title {
     background-color: black;
     color: white;
-    width: 20em;
-    padding: 2em 3em;
+    width: 20rem;
+    padding: 2rem 3rem;
     position: relative;
-    top: 9em;
+    top: 9rem;
 }
 
 .top-nav {
@@ -79,7 +79,13 @@ h2 {
     align-items: center;
     justify-content: space-between;
     padding: 0.75em 0;
-    list-style: none;
+}
+
+.top-nav .mobile-container {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75em 0;
 }
 
 a {
@@ -161,4 +167,73 @@ a {
 .container4 {
     max-width: 960px;
     margin: 0 auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    .item3 {
+        display: none;
+    }
+    .items {
+        display: flex;
+        justify-content: space-around;
+    }
+    h1 {
+        font-weight: normal;
+    }
+    .item1,
+    .item2 {
+        width: 47%;
+    }
+    .top-nav .container {
+        display: none;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75em 0;
+    }
+    .top-nav .mobile-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.75em 0;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    h1 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    h2 {
+        font-size: 0.77rem;
+        font-weight: bold;
+    }
+    .banner {
+        height: 15rem;
+    }
+    .title {
+        width: auto;
+        ;
+        padding: 1rem 2rem;
+        position: relative;
+        top: 9rem;
+    }
+    .container4 {
+        justify-content: center;
+        text-align: center;
+    }
+    .item3,
+    .item2 {
+        display: none;
+    }
+    .item1 {
+        width: 90%;
+    }
+    .locs {
+        flex-direction: column;
+    }
+    .loc {
+        width: 90%;
+        padding: 1rem 0;
+        margin: auto;
+    }
 }
